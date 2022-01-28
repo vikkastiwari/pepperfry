@@ -1,0 +1,51 @@
+<form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h2 class="center">REGISTER!</h2>
+        <div class="container">
+
+        <div>
+            <label>First Name</label>
+            <label class="message" *ngIf="registerForm.get('firstname').errors">required*</label>
+        </div>
+        <input type="text" name="name" placeholder="Your first name.." formControlName="firstname">
+
+        <div>
+            <label>Last Name</label>
+            <label class="message" *ngIf="registerForm.get('lastname').errors">required*</label>
+        </div>
+        <input type="text" name="name" placeholder="Your last name.." formControlName="lastname">
+
+        <div>
+            <label>Email</label>
+            <label class="message" *ngIf="registerForm.get('email').errors">required*</label>
+        </div>
+        <input type="text" name="name" placeholder="Your email.." formControlName="email">
+        
+        <div>
+            <label>Phone</label>
+            <label class="message" *ngIf="registerForm.get('phone').errors">required*</label>
+        </div>
+        <input type="phone" name="phone" placeholder="Your phone.." formControlName="phone">
+
+        <div>
+            <label>Password</label>
+            <label class="message" *ngIf="registerForm.get('password').errors">required*</label>
+        </div>
+        <input type="password" name="password" placeholder="Your password.." formControlName="password">
+
+        <div>
+            <label>Confirm Password</label>
+            <label class="message" *ngIf="registerForm.hasError('passwordsNotMatching')">required*</label>
+        </div>
+        <input type="password" name="confirm password" placeholder="Re-enter password.." formControlName="confirmPassword">
+
+        <div *ngIf="!registerForm.hasError('passwordsNotMatching'); then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <label style="color: green;">Accepted</label>
+        </ng-template>
+        <ng-template  #elseBlock >
+            <label style="text-align: center; color: rgb(252, 27, 27);">passwords should match and should contain a number*</label>
+        </ng-template>
+
+        <input type="submit">
+    </div>
+</form>

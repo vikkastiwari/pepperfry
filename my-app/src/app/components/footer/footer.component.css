@@ -1,0 +1,14 @@
+.footer {
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #D0DAEE;
+  padding: 3px 15px;
+}
+
+.footer p{
+    text-align: center;
+}
+
+p {
+  font-family: Lato;
+}

@@ -1,0 +1,47 @@
+.header {
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #039be5;
+  padding: 3px 5px;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-align: center;
+  margin: 10px 7px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.topnav a:visited,
+a:link {
+  color: #607d8b;
+}
+.topnav a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+.topnav a.active {
+  color: #039be5;
+}
+.topnav-right {
+  float: right;
+}
+
+.logo img {
+    height: 40px;
+  max-width: 55px;
+  float: left;
+  margin: 5px 5px ;
+  border-radius: 50%;
+}
+
+.logo {
+  float: left;
+}

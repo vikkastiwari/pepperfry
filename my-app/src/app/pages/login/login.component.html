@@ -1,0 +1,18 @@
+<h2 class="center">LOGIN!</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <div>
+            <label >Email</label>
+            <label class="message" *ngIf="loginForm.controls.email.errors">required*</label>
+        </div>
+        <input type="email" name="email" placeholder="Your email.." formControlName="email" />
+
+        <div>
+            <label>Password</label>
+            <label class="message" *ngIf="loginForm.controls.password.errors" >required*</label>
+        </div>
+        <input type="password" name="password" placeholder="Your password.." formControlName="password">
+
+        <input type="submit" [disabled]="!loginForm.valid" >
+    </div>
+</form>
